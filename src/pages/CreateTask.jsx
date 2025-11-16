@@ -19,7 +19,7 @@ export default function CreateTask() {
     addTask(formData);
     reset();
     alert("Task Created!");
-    navigator("/home")
+    navigator("/")
   }
 
   return (
