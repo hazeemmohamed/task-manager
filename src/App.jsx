@@ -11,6 +11,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/create" element={<CreateTask />} />
         <Route path="/edit/:id" element={<EditTask />} />
+        <Route path="*" element={<Home></Home>}></Route>
       </Routes>
     </Router>
   );

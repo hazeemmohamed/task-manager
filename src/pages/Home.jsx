@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { TaskContext } from "../context/TaskContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Home() {
   const { tasks, deleteTask } = useContext(TaskContext);
@@ -9,6 +9,8 @@ export default function Home() {
   const filtered = tasks.filter((t) =>
     t.title.toLowerCase().includes(search.toLowerCase())
   );
+
+  const navigator = useNavigate()
 
   return (
     <div className="p-6 mx-auto">
